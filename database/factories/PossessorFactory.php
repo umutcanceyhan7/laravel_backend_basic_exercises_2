@@ -23,24 +23,11 @@ class PossessorFactory extends Factory
     {
         $possessor_images_path = public_path('img/possessor_images');
         return [
-            [
                 'name' => 'Ash Ketchum',
                 'picture' => $possessor_images_path.'/ash_ketchum.png',
                 'age' => '10',
                 'score' => '0',
-                ],
-            [
-                'name' => 'Ethan',
-                'picture' => $possessor_images_path.'/ethan.png',
-                'age' => '12',
-                'score' => '0',
-                ],
-            [
-                'name' => 'Cynthia',
-                'picture' => $possessor_images_path.'/cynthia.jpg',
-                'age' => '15',
-                'score' => '0',
-                ],
+                
         ];
     }
 }

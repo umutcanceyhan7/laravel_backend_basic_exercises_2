@@ -17,7 +17,7 @@ class CreatePossessorsTable extends Migration
             $table->id();
             
             $table->string('name');
-            $table->string('img_destination');
+            $table->string('picture');
             $table->integer('age');
             $table->double('score');
             $table->timestamps();
