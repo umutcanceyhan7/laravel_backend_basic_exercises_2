@@ -86,6 +86,7 @@ class PokemonSeeder extends Seeder
         ];
         // Pokemon attributes assigned to the variables
         foreach($pokemons as $pokemon){
+            $pokemon_guid = $pokemon['pokemon_guid'];
             $name = $pokemon['name'];
             $picture = $pokemon['picture'];
             $age = $pokemon['age'];
@@ -97,6 +98,7 @@ class PokemonSeeder extends Seeder
             
             // Custom pokemon values changed with the dummy data.
             Pokemon::factory(App\Model\Pokemon::class)->create([
+            'pokemon_guid' => $pokemon_guid,    
             'name' => $name,
             'picture' => $picture,
             'age' => $age,

@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Possessor;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class PossessorFactory extends Factory
 {
@@ -23,6 +24,7 @@ class PossessorFactory extends Factory
     {
         $possessor_images_path = public_path('img/possessor_images');
         return [
+                'possessor_guid' => Str::uuid(),
                 'name' => 'Ash Ketchum',
                 'picture' => $possessor_images_path.'/ash_ketchum.png',
                 'age' => '10',

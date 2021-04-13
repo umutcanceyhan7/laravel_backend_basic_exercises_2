@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Pokemon;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class PokemonFactory extends Factory
 {
@@ -24,6 +25,7 @@ class PokemonFactory extends Factory
         
         return [
             //
+            'pokemon_guid' => Str::uuid(),
             'name' => 'Bulbasaur',
             'picture' => '\balbasaur.png',
             'age' => '1',
