@@ -22,9 +22,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/possessors', function () {
-    return view('possessors');
+    return view('front/pages/possessors');
 })->name('possessors');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/pokemons', function () {
-    return view('pokemons');
+    return view('front/pages/pokemons');
 })->name('pokemons');
