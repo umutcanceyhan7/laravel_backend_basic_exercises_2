@@ -18,6 +18,7 @@ class PokemonSeeder extends Seeder
         //
         $pokemon_images_path = public_path('img\pokemon_images');
         $pokemons = [[
+            'pokemon_guid' => '5537298b-796e-4a15-b036-affd83d42e49',
             'name' => 'Bulbasaur',
             'picture' => $pokemon_images_path.'\balbasaur.png',
             'age' => '1',
@@ -28,6 +29,7 @@ class PokemonSeeder extends Seeder
             'ability' => 'overgrow',
             ],
             [
+            'pokemon_guid' => 'b9dcac0b-2078-4b4f-b5b0-6d7082b78e2c',
             'name' => 'Ivysaur',
             'picture' => $pokemon_images_path.'\ivysaur.png',
             'age' => '16',
@@ -38,6 +40,7 @@ class PokemonSeeder extends Seeder
             'ability' => 'overgrow',
             ],
             [
+            'pokemon_guid' => '92ae54b5-d841-4bdf-a49f-8de596c82324',
             'name' => 'Venusaur',
             'picture' => $pokemon_images_path.'\venusaur.png',
             'age' => '32',
@@ -48,6 +51,7 @@ class PokemonSeeder extends Seeder
             'ability' => 'overgrow',
             ],
             [
+            'pokemon_guid' => '4e3db58a-8b9a-4b96-92c0-8b95ee435b55',
             'name' => 'Charmander',
             'picture' => $pokemon_images_path.'\charmander.png',
             'age' => '1',
@@ -58,6 +62,7 @@ class PokemonSeeder extends Seeder
             'ability' => 'blaze',
             ],
             [
+            'pokemon_guid' => 'a27879f8-4f6b-4f75-b2ec-03aedef4e534',
             'name' => 'Charmeleon',
             'picture' => $pokemon_images_path.'\charmeleon.png',
             'age' => '16',
@@ -68,6 +73,7 @@ class PokemonSeeder extends Seeder
             'ability' => 'blaze',
             ],
             [
+            'pokemon_guid' => '69581418-c042-4144-b3d1-13bfbff6d4b3',
             'name' => 'Charizard',
             'picture' => $pokemon_images_path.'\charizard.png',
             'age' => '32',
