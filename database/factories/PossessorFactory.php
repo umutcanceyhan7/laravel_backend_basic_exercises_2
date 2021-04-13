@@ -24,12 +24,12 @@ class PossessorFactory extends Factory
     {
         $possessor_images_path = public_path('img/possessor_images');
         return [
-                'possessor_guid' => Str::uuid(),
-                'name' => 'Ash Ketchum',
-                'picture' => $possessor_images_path.'/ash_ketchum.png',
-                'age' => '10',
-                'score' => '0',
-                
+            'possessor_guid' => Str::uuid(),
+            'name' => 'Ash Ketchum',
+            'picture' => $possessor_images_path . '/ash_ketchum.png',
+            'age' => '10',
+            'score' => '0',
+
         ];
     }
 }

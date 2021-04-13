@@ -22,7 +22,7 @@ class PokemonFactory extends Factory
      */
     public function definition()
     {
-        
+
         return [
             //
             'pokemon_guid' => Str::uuid(),

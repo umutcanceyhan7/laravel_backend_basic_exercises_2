@@ -11,7 +11,8 @@ class Pokemon extends Model
 
     protected $table = 'pokemons';
 
-    public function possessors(){
-        return $this->belongsToMany(Possessor::class,'possessors_pokemons');
+    public function possessors()
+    {
+        return $this->belongsToMany(Possessor::class, 'possessors_pokemons');
     }
 }

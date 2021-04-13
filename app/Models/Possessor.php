@@ -11,8 +11,8 @@ class Possessor extends Model
 
     protected $table = 'possessors';
 
-    public function pokemons(){
+    public function pokemons()
+    {
         return $this->belongsToMany(Pokemon::class, 'possessors_pokemons');
     }
-    
 }
