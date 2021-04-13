@@ -15,7 +15,8 @@ class CreatePossessorsTable extends Migration
     {
         Schema::create('possessors', function (Blueprint $table) {
             $table->id();
-            
+
+            $table->uuid('possessor_guid', 36)->default(Str::uuid());
             $table->string('name');
             $table->string('picture');
             $table->integer('age');

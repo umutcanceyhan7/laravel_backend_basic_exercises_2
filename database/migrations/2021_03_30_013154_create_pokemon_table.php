@@ -16,6 +16,7 @@ class CreatePokemonTable extends Migration
         Schema::create('pokemons', function (Blueprint $table) {
             $table->id();
             
+            $table->uuid('pokemon_guid', 36)->default(Str::uuid());
             $table->string('name');
             $table->string('picture');
             $table->integer('age');
