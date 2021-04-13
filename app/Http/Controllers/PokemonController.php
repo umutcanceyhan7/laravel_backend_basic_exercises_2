@@ -11,11 +11,5 @@ class PokemonController extends Controller
     public function index(){
         $d['pokemons'] = Pokemon::get();
         return view('front/pages/pokemons', $d);
-    }
-
-    public function show($pokemon)
-    {
-        
-        
-    }
+    } 
 }
