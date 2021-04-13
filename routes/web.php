@@ -20,3 +20,11 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/possessors', function () {
+    return view('possessors');
+})->name('possessors');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/pokemons', function () {
+    return view('pokemons');
+})->name('pokemons');
