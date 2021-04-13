@@ -9,11 +9,13 @@ class PokemonController extends Controller
 {
     //
     public function index(){
-        return Pokemon::get();
+        $d['pokemons'] = Pokemon::get();
+        return view('front/pages/pokemons', $d);
     }
 
     public function show($pokemon)
     {
-        return Pokemon::where('id', $pokemon)->get();
+        
+        
     }
 }
