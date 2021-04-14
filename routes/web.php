@@ -27,12 +27,14 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/possessors', [PossessorCo
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/pokemons', [PokemonController::class, 'index'])->name('pokemons');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/create-possessors', [PossessorController::class, 'createPossessor'])->name('createPossessor');
+Route::middleware(['auth:sanctum', 'verified'])->get('/create-possessor', [PossessorController::class, 'createPossessor'])->name('createPossessor');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/create-pokemons', [PokemonController::class, 'createPokemonPage'])->name('createPokemon');
+Route::middleware(['auth:sanctum', 'verified'])->get('/create-pokemon', [PokemonController::class, 'createPokemon'])->name('createPokemon');
 
 /**
  * Post Routes
  */
 
-Route::middleware(['auth:sanctum', 'verified'])->post('/create-pokemons', [PossessorController::class, 'createPossessorPost'])->name('createPossessorPost');
+Route::middleware(['auth:sanctum', 'verified'])->post('/create-possessor', [PossessorController::class, 'createPossessorPost'])->name('createPossessorPost');
+
+Route::middleware(['auth:sanctum', 'verified'])->post('/create-pokemon', [PokemonController::class, 'createPokemonPost'])->name('createPokemonPost');

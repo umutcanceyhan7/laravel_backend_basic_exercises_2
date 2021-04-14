@@ -34,7 +34,7 @@ class PossessorController extends Controller
         $new_possessor->score = $possessor_score;
         // Save it to database
         $new_possessor->save();
-
+        // Redirect to possessors page
         return redirect()->route('possessors');
     }
 }
