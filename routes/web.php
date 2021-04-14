@@ -26,3 +26,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/possessors', [PossessorController::class, 'index'])->name('possessors');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/pokemons', [PokemonController::class, 'index'])->name('pokemons');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/create-possessors', [PossessorController::class, 'createPossessorPage'])->name('createPossessors');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/create-pokemons', [PokemonController::class, 'createPokemonPage'])->name('createPokemons');
