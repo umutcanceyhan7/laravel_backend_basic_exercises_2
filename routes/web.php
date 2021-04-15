@@ -19,22 +19,29 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcomePage');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/possessors', [PossessorController::class, 'index'])->name('possessors');
+    /**
+     * Get Routes
+     */
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/pokemons', [PokemonController::class, 'index'])->name('pokemons');
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/create-possessor', [PossessorController::class, 'createPossessor'])->name('createPossessor');
+    Route::get('/possessors', [PossessorController::class, 'index'])->name('possessors');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/create-pokemon', [PokemonController::class, 'createPokemon'])->name('createPokemon');
+    Route::get('/pokemons', [PokemonController::class, 'index'])->name('pokemons');
 
-/**
- * Post Routes
- */
+    Route::get('/create-possessor', [PossessorController::class, 'createPossessor'])->name('createPossessor');
 
-Route::middleware(['auth:sanctum', 'verified'])->post('/create-possessor', [PossessorController::class, 'createPossessorPost'])->name('createPossessorPost');
+    Route::get('/create-pokemon', [PokemonController::class, 'createPokemon'])->name('createPokemon');
 
-Route::middleware(['auth:sanctum', 'verified'])->post('/create-pokemon', [PokemonController::class, 'createPokemonPost'])->name('createPokemonPost');
+    /**
+     * Post Routes
+     */
+
+    Route::post('/create-possessor', [PossessorController::class, 'createPossessorPost'])->name('createPossessorPost');
+
+    Route::post('/create-pokemon', [PokemonController::class, 'createPokemonPost'])->name('createPokemonPost');
+});
