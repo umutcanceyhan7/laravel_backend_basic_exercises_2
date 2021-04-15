@@ -7,7 +7,7 @@ use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Tests\TestCase;
 use App\Models\User;
 
-class PokemonTest extends TestCase
+class UserNavigationRoutesTest extends TestCase
 {
     use RefreshDatabase;
     /**
