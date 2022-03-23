@@ -1,4 +1,4 @@
-### This project aims to understand many-to-many relation and CRUD operations by using Laravel (PHP)
+## This project aims to understand many-to-many relation and CRUD operations by using Laravel (PHP)
 
 ### Details
 ---
